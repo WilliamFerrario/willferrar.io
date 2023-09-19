@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(22, 22, 22);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    cursor: none;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none; /* Removes the underline */
+    transition: transform 0.3s; /* Transition for the grow effect */
+    transform: scale(0.9); /* Make the links smaller */
+}
+
+a:hover {
+    color: rgb(255, 255, 255); /* Keeps the text color white on hover */
+    transition: all .2s ease-in-out;
+    transform: scale(1.2); /* Grow effect when hovered, from 0.9 to a little bigger */
+    text-decoration: none; /* Removes the underline on hover */
+    cursor: none;
+
+}
+
+#header {
+    margin-bottom: 50px;
+    animation: floating1 8s ease-in-out infinite; 
+    font-size: 4em; /* Increased the font size */
+}
+
+#about h2 {
+    margin: 0 25px;
+    display: inline-block;
+}
+
+#about h2:nth-child(1) {
+    animation: floating2 7.5s ease-in-out infinite;
+}
+
+#about h2:nth-child(2) {
+    animation: floating3 8.5s ease-in-out infinite;
+}
+
+#about h2:nth-child(3) {
+    animation: floating4 7s ease-in-out infinite;
+}
+
+#about h2:hover {
+    animation-play-state: paused; /* Pauses the animation on hover */
+    cursor: none;
+}
+
+#custom-cursor {
+    width: 7px; /* Size of the dot */
+    height: 7px;
+    border-radius: 50%; /* Make it a circle */
+    background-color: rgba(255, 255, 255, 0.795); /* Greyish white with 50% transparency */
+    position: absolute;
+    pointer-events: none; /* Ensures the dot doesn't interfere with actual clickable items */
+    transform: translate(-50%, -50%); /* Centers the dot on the actual cursor position */
+    z-index: 9999;
+}
+
+@keyframes floating1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, -10px); /* Reduced translation */
+    }
+    50% {
+        transform: translate(5px, 5px); /* Reduced translation */
+    }
+    75% {
+        transform: translate(-3px, 7px); /* Reduced translation */
+    }
+}
+
+@keyframes floating2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(8px, -5px); /* Reduced translation */
+    }
+    50% {
+        transform: translate(-8px, 10px); /* Reduced translation */
+    }
+    75% {
+        transform: translate(4px, -8px); /* Reduced translation */
+    }
+}
+
+@keyframes floating3 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, 13px); /* Reduced translation */
+    }
+    50% {
+        transform: translate(5px, -10px); /* Reduced translation */
+    }
+    75% {
+        transform: translate(-3px, 5px); /* Reduced translation */
+    }
+}
+
+@keyframes floating4 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -3px); /* Reduced translation */
+    }
+    50% {
+        transform: translate(-10px, 3px); /* Reduced translation */
+    }
+    75% {
+        transform: translate(5px, -5px); /* Reduced translation */
+    }
+}
